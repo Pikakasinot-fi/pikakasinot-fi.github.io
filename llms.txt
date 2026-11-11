@@ -1,0 +1,20 @@
+# Pikakasinot.fi (esittelysivu GitHubissa)
+
+> Pikakasinot.fi esittelee suomalaisille pelaajille pikakasinoita eli nettikasinoita, joilla talletus ja kirjautuminen hoituvat verkkopankkitunnuksilla ilman erillistä rekisteröitymistä.
+
+Tämä on Pikakasinot.fi:n GitHub-organisaation esittelysivu. Varsinainen sisältö on osoitteessa https://pikakasinot.fi/fi/. Sivusto on kaupallinen opas: kasinolinkit ovat kumppanilinkkejä, ja tarjoukset ovat kasinoiden omia. Rahapelit on tarkoitettu täysi-ikäisille.
+
+## Sivusto
+
+- [Pikakasinot.fi](https://pikakasinot.fi/fi/): pikakasinoiden vertailu ja toimituksen suositukset
+- [Kierrätysvapaat ilmaiskierrokset](https://pikakasinot.fi/kierratysvapaat-ilmaiskierrokset/)
+- [Luotettavat nettikasinot](https://pikakasinot.fi/luotettavat-nettikasinot/)
+- [Vedonlyönti ilman rekisteröitymistä](https://pikakasinot.fi/vedonlyonti-ilman-rekisteroitymista/)
+- [Vastuullinen pelaaminen](https://pikakasinot.fi/vastuullinen-pelaaminen-ikaraja/)
+- [Artikkelit](https://pikakasinot.fi/category/artikkelit/)
+- [Koneluettava kuvaus sivustosta](https://pikakasinot.fi/llms.txt)
+
+## Yhteystiedot
+
+- Sähköposti: info@pikakasinot.fi
+- GitHub: https://github.com/Pikakasinot-fi

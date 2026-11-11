@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pikakasinot.fi – opas nettikasinoihin ilman rekisteröitymistä</title>
+<meta name="description" content="Pikakasinot.fi on suomenkielinen opas pikakasinoihin. Tällä sivulla kerromme, mitä sivustolta löytyy, kuka sitä tekee ja miten se on rakennettu.">
+<link rel="canonical" href="https://pikakasinot-fi.github.io/">
+<meta name="theme-color" content="#1670b8">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/montserrat-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/cabin-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fi_FI">
+<meta property="og:site_name" content="Pikakasinot.fi">
+<meta property="og:title" content="Pikakasinot.fi – opas nettikasinoihin ilman rekisteröitymistä">
+<meta property="og:description" content="Mitä Pikakasinot.fi:stä löytyy, kuka sitä tekee ja miten sivusto on rakennettu.">
+<meta property="og:url" content="https://pikakasinot-fi.github.io/">
+<meta property="og:image" content="https://pikakasinot-fi.github.io/assets/img/pikakasinot-1200.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="og:image:alt" content="Pikakasinot: kolme aikuista suomalaista pelaa puhelimilla kahvipöydän ääressä.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@pikakasinot">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": "https://pikakasinot-fi.github.io/#page",
+  "url": "https://pikakasinot-fi.github.io/",
+  "name": "Pikakasinot.fi – opas nettikasinoihin ilman rekisteröitymistä",
+  "inLanguage": "fi-FI",
+  "primaryImageOfPage": "https://pikakasinot-fi.github.io/assets/img/pikakasinot-1200.jpg",
+  "about": {
+    "@type": "Organization",
+    "@id": "https://pikakasinot.fi/fi/#organization",
+    "name": "Pikakasinot.fi",
+    "url": "https://pikakasinot.fi/fi/",
+    "email": "info@pikakasinot.fi",
+    "sameAs": ["https://github.com/Pikakasinot-fi", "https://x.com/pikakasinot"]
+  }
+}
+</script>
+<style>
+@font-face { font-family: "Montserrat"; font-style: normal; font-weight: 500 900; font-display: swap; src: url("/assets/fonts/montserrat-latin-var.woff2") format("woff2"); }
+@font-face { font-family: "Cabin"; font-style: normal; font-weight: 400 700; font-display: swap; src: url("/assets/fonts/cabin-latin-var.woff2") format("woff2"); }
+
+:root {
+  --pk-blue: #1670b8;
+  --pk-blue-deep: #0f4f85;
+  --pk-sky: #2ba6e0;
+  --pk-sun: #ffb81c;
+  --pk-sun-soft: #fff5d9;
+  --pk-ink: #172631;
+  --pk-text: #26313a;
+  --pk-muted: #5b6874;
+  --pk-line: #dfe7ef;
+  --pk-bg: #fbfcfe;
+  --pk-header: #eef6fe;
+  --pk-band: #f2f7fc;
+  --pk-radius: 16px;
+  --pk-shadow: 0 1px 2px rgba(23, 38, 49, .06), 0 8px 24px rgba(23, 38, 49, .08);
+  --pk-max: 1080px;
+  --pk-head: "Montserrat", "Segoe UI", Arial, sans-serif;
+  --pk-body: "Cabin", "Segoe UI", Arial, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--pk-bg); color: var(--pk-text); font: 17px/1.6 var(--pk-body); }
+img { max-width: 100%; height: auto; }
+a { color: var(--pk-blue); text-underline-offset: 2px; }
+a:hover { color: var(--pk-blue-deep); }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--pk-sun); outline-offset: 2px; border-radius: 6px; }
+h1, h2, h3 { font-family: var(--pk-head); color: var(--pk-ink); line-height: 1.2; letter-spacing: -.01em; margin: 0; }
+h1 { font-size: clamp(1.8rem, 1.2rem + 2.4vw, 2.75rem); font-weight: 800; }
+h2 { font-size: clamp(1.4rem, 1.1rem + 1.2vw, 1.9rem); font-weight: 800; }
+h3 { font-size: 1.12rem; font-weight: 700; }
+p { margin: 0 0 1em; }
+.wrap { width: min(100% - 32px, var(--pk-max)); margin-inline: auto; }
+.skip { position: absolute; left: -9999px; }
+.skip:focus { left: 16px; top: 8px; z-index: 50; background: #fff; padding: 8px 12px; border-radius: 8px; }
+
+/* Ylätunniste */
+.agebar { background: var(--pk-blue-deep); color: #e8f3ff; font-size: 13px; }
+.agebar .wrap { display: flex; justify-content: space-between; gap: 12px; padding: 5px 0; }
+.agebar strong { color: var(--pk-sun); }
+.site-header { background: var(--pk-header); border-bottom: 1px solid var(--pk-line); }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 76px; }
+.brand img { display: block; width: 240px; height: auto; }
+.site-link { font: 700 14.5px/1 var(--pk-head); color: var(--pk-ink); text-decoration: none; padding: 11px 16px; border-radius: 999px; background: #fff; border: 1px solid var(--pk-line); white-space: nowrap; }
+.site-link:hover { color: var(--pk-blue); border-color: var(--pk-sky); }
+
+/* Hero */
+.hero { background: radial-gradient(120% 140% at 100% 0%, #dff0fd 0%, var(--pk-header) 45%, var(--pk-bg) 100%); padding: 48px 0 44px; }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 44px; align-items: center; }
+.eyebrow { display: inline-block; font: 700 12.5px/1 var(--pk-head); letter-spacing: .08em; text-transform: uppercase; color: var(--pk-blue-deep); background: var(--pk-sun-soft); border: 1px solid #ffe2a0; padding: 7px 11px; border-radius: 999px; margin-bottom: 16px; }
+.hero h1 { margin-bottom: 18px; }
+.hero .lead { font-size: 1.1rem; max-width: 34em; }
+.hero figure { margin: 0; }
+.hero figure img { display: block; width: 100%; border-radius: var(--pk-radius); box-shadow: var(--pk-shadow); border: 1px solid var(--pk-line); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; font: 700 15.5px/1 var(--pk-head); text-decoration: none; padding: 15px 22px; border-radius: 999px; }
+.btn-primary { background: var(--pk-blue); color: #fff; box-shadow: 0 3px 0 var(--pk-blue-deep); }
+.btn-primary:hover { background: var(--pk-blue-deep); color: #fff; }
+.btn-ghost { background: #fff; color: var(--pk-ink); border: 1px solid var(--pk-line); }
+.btn-ghost:hover { border-color: var(--pk-sky); color: var(--pk-blue); }
+
+/* Osiot */
+section { padding: 52px 0; }
+.band { background: var(--pk-band); border-block: 1px solid var(--pk-line); }
+.section-head { max-width: 44em; margin-bottom: 26px; }
+.section-head h2 { margin-bottom: 10px; }
+.section-head p { color: var(--pk-muted); margin: 0; }
+
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; list-style: none; margin: 0; padding: 0; }
+.card { position: relative; height: 100%; background: #fff; border: 1px solid var(--pk-line); border-radius: var(--pk-radius); padding: 20px 20px 18px; transition: border-color .15s, box-shadow .15s, transform .15s; }
+.card:hover { border-color: var(--pk-sky); box-shadow: var(--pk-shadow); transform: translateY(-2px); }
+.card h3 { margin-bottom: 6px; }
+.card h3 a { color: var(--pk-ink); text-decoration: none; }
+.card h3 a::after { content: ""; position: absolute; inset: 0; border-radius: var(--pk-radius); }
+.card:hover h3 a { color: var(--pk-blue); }
+.card p { margin: 0; color: var(--pk-muted); font-size: .98rem; }
+.card .go { display: block; margin-top: 12px; font: 700 13.5px/1 var(--pk-head); color: var(--pk-blue); }
+
+.reads { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 40px; }
+.reads li { padding: 16px 0; border-top: 1px solid var(--pk-line); }
+.reads a { font: 700 1.05rem/1.3 var(--pk-head); text-decoration: none; }
+.reads a:hover { text-decoration: underline; }
+.reads p { margin: 4px 0 0; color: var(--pk-muted); font-size: .98rem; }
+
+.steps { list-style: none; margin: 0 0 26px; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; counter-reset: step; }
+.steps li { counter-increment: step; background: #fff; border: 1px solid var(--pk-line); border-radius: var(--pk-radius); padding: 20px; }
+.steps li::before { content: counter(step); display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--pk-sun); color: var(--pk-ink); font: 800 15px/1 var(--pk-head); margin-bottom: 12px; }
+.steps h3 { margin-bottom: 6px; }
+.steps p { margin: 0; color: var(--pk-muted); font-size: .98rem; }
+.note { max-width: 46em; }
+.note p:last-child { margin-bottom: 0; }
+
+.about { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 40px; align-items: start; }
+.about h2 { margin-bottom: 12px; }
+.contacts { list-style: none; margin: 18px 0 0; padding: 0; }
+.contacts li { display: flex; gap: 12px; padding: 9px 0; border-top: 1px solid var(--pk-line); }
+.contacts span { flex: 0 0 96px; color: var(--pk-muted); }
+.disclosure { background: var(--pk-sun-soft); border: 1px solid #ffe2a0; border-radius: var(--pk-radius); padding: 20px; }
+.disclosure h3 { margin-bottom: 8px; }
+.disclosure p { margin: 0; font-size: .98rem; }
+.english { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--pk-line); color: var(--pk-muted); font-size: .98rem; }
+.english strong { color: var(--pk-ink); }
+
+/* Alatunniste */
+.site-footer { background: var(--pk-ink); color: #c9d6e2; font-size: 14.5px; padding: 28px 0; }
+.site-footer a { color: #fff; }
+.site-footer .cols { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px 28px; align-items: center; }
+.site-footer nav { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.age { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--pk-sun); color: var(--pk-sun); font: 800 12px/1 var(--pk-head); margin-right: 10px; vertical-align: middle; }
+.legal { margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, .14); color: #9fb0bf; }
+
+@media (max-width: 900px) {
+  .hero .wrap, .about { grid-template-columns: 1fr; gap: 28px; }
+  .grid, .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 620px) {
+  body { font-size: 16.5px; }
+  .hero { padding: 30px 0 32px; }
+  section { padding: 38px 0; }
+  .grid, .steps, .reads { grid-template-columns: 1fr; }
+  .brand img { width: 180px; }
+  .site-header .wrap { min-height: 64px; }
+  .agebar .hide-s { display: none; }
+  .btn { width: 100%; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .card { transition: none; }
+  .card:hover { transform: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#sisalto">Siirry sisältöön</a>
+
+<div class="agebar"><div class="wrap"><span><strong>18+</strong> Rahapelit on tarkoitettu täysi-ikäisille.</span><span class="hide-s">Pikakasinot.fi:n esittelysivu GitHubissa</span></div></div>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="https://pikakasinot.fi/fi/"><img src="/assets/img/pikakasinot-fi-logo.png" width="635" height="127" alt="Pikakasinot.fi"></a>
+    <a class="site-link" href="https://pikakasinot.fi/fi/">pikakasinot.fi →</a>
+  </div>
+</header>
+
+<main id="sisalto">
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Suomenkielinen kasino-opas</span>
+      <h1>Pikakasinot.fi – opas nettikasinoihin ilman rekisteröitymistä</h1>
+      <p class="lead">Pikakasinolle kirjaudutaan verkkopankkitunnuksilla. Talletus hoituu samalla, eikä osoitetta tai syntymäaikaa tarvitse näpytellä lomakkeelle. Pikakasinot.fi vertailee näitä kasinoita ja kertoo, mitä tarjousten ehdot käytännössä tarkoittavat.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://pikakasinot.fi/fi/">Siirry sivustolle</a>
+        <a class="btn btn-ghost" href="https://pikakasinot.fi/category/artikkelit/">Selaa artikkeleita</a>
+      </div>
+    </div>
+    <figure>
+      <img src="/assets/img/pikakasinot-720.webp" srcset="/assets/img/pikakasinot-720.webp 720w, /assets/img/pikakasinot-1200.webp 1200w" sizes="(max-width: 900px) calc(100vw - 32px), 520px" width="1200" height="675" alt="Pikakasinot: kolme aikuista suomalaista pelaa puhelimilla kahvipöydän ääressä." fetchpriority="high">
+    </figure>
+  </div>
+</div>
+
+<section aria-labelledby="loytyy">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="loytyy">Mitä sivustolta löytyy</h2>
+      <p>Vertailun lisäksi sivustolla on pysyviä oppaita, jotka auttavat arvioimaan kasinoa ja tarjousta ennen talletusta.</p>
+    </div>
+    <ul class="grid">
+      <li><div class="card">
+        <h3><a href="https://pikakasinot.fi/fi/">Pikakasinoiden vertailu</a></h3>
+        <p>Etusivulla ovat toimituksen suositukset, uudet tulokkaat ja kaikki listatut kasinot.</p>
+        <span class="go" aria-hidden="true">pikakasinot.fi/fi/ →</span>
+      </div></li>
+      <li><div class="card">
+        <h3><a href="https://pikakasinot.fi/kierratysvapaat-ilmaiskierrokset/">Kierrätysvapaat ilmaiskierrokset</a></h3>
+        <p>Ilmaiskierrokset, joiden voitoissa ei ole kierrätysvaatimusta.</p>
+        <span class="go" aria-hidden="true">Lue opas →</span>
+      </div></li>
+      <li><div class="card">
+        <h3><a href="https://pikakasinot.fi/luotettavat-nettikasinot/">Luotettavat nettikasinot</a></h3>
+        <p>Lisenssin tarkistus, yleisimmät huijaukset ja toimituksen verovapaat valinnat.</p>
+        <span class="go" aria-hidden="true">Lue opas →</span>
+      </div></li>
+      <li><div class="card">
+        <h3><a href="https://pikakasinot.fi/vedonlyonti-ilman-rekisteroitymista/">Vedonlyönti ilman rekisteröitymistä</a></h3>
+        <p>Vedonlyöntisivustot pankkitunnuksilla ja Pikakasinot.fi:n vetovinkit.</p>
+        <span class="go" aria-hidden="true">Lue opas →</span>
+      </div></li>
+      <li><div class="card">
+        <h3><a href="https://pikakasinot.fi/vastuullinen-pelaaminen-ikaraja/">Vastuullinen pelaaminen</a></h3>
+        <p>Suoraa puhetta riskeistä, omista rajoista ja avun hakemisesta.</p>
+        <span class="go" aria-hidden="true">Lue opas →</span>
+      </div></li>
+      <li><div class="card">
+        <h3><a href="https://pikakasinot.fi/category/artikkelit/">Artikkelit</a></h3>
+        <p>Taustoja lisensseistä, maksutavoista ja Suomen rahapelijärjestelmän muutoksesta.</p>
+        <span class="go" aria-hidden="true">Kaikki artikkelit →</span>
+      </div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="lukemista">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="lukemista">Taustalukemista</h2>
+      <p>Neljä artikkelia, joista selviää, miten pikakasinot toimivat ja millä luvilla niitä pyöritetään.</p>
+    </div>
+    <ul class="reads">
+      <li>
+        <a href="https://pikakasinot.fi/artikkelit/trustly-pikakasinoiden-mahdollistaja/">Trustly – pikakasinoiden mahdollistaja</a>
+        <p>Miten talletus ja kotiutus toimivat, mistä viiveet johtuvat ja miten Trustly-maksut rahapeleihin voi estää.</p>
+      </li>
+      <li>
+        <a href="https://pikakasinot.fi/artikkelit/rahapelien-lisenssijarjestelma-suomi-pikakasinot-tulossa-2026/">Rahapelien lisenssijärjestelmä – Suomi-pikakasinot tulossa pian</a>
+        <p>Suomen rahapelimarkkina avautuu lisensseille 1.7.2027. Mitä lisenssi tarkoittaa pikakasinoiden pelaajalle?</p>
+      </li>
+      <li>
+        <a href="https://pikakasinot.fi/artikkelit/viron-lisenssi/">Viron lisenssi – virolaiset pikakasinot ja suomalaiset pelaajat</a>
+        <p>Miten Viron lupa toimii ja miksi niin moni suomalaisten suosima pikakasino käyttää sitä.</p>
+      </li>
+      <li>
+        <a href="https://pikakasinot.fi/artikkelit/anjouanin-lisenssi-nettikasinolla/">Anjouanin lisenssi nettikasinolla, mistä on kyse?</a>
+        <p>Kuka luvan myöntää, miten sen tarkistat ja miten voittoja verotetaan.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section aria-labelledby="tekniikka">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="tekniikka">Näin sivusto syntyy</h2>
+      <p>Pikakasinot.fi on staattinen sivusto. Kävijälle lähtee valmis HTML-tiedosto, joten sivut latautuvat nopeasti.</p>
+    </div>
+    <ol class="steps">
+      <li>
+        <h3>Sisältö tiedostoina</h3>
+        <p>Sivujen tekstit ja kasinotiedot ovat JSON-tiedostoina versionhallinnassa. Jokaisesta muutoksesta jää jälki.</p>
+      </li>
+      <li>
+        <h3>Rakennin kokoaa sivut</h3>
+        <p>Python-ohjelma tekee tiedostoista valmiit HTML-sivut ja tarkistaa ne ennen julkaisua.</p>
+      </li>
+      <li>
+        <h3>Julkaisu GitHub Actionsilla</h3>
+        <p>Julkaisuajo vie muutoksen palvelimelle ja lukee muuttuneet sivut vielä livestä.</p>
+      </li>
+    </ol>
+    <div class="note">
+      <p>Sivusto siirtyi WordPressistä staattiseksi marraskuussa 2026. Julkaisutyökaluja kehitetään GitHub-organisaatiossa <a href="https://github.com/Pikakasinot-fi">Pikakasinot-fi</a>. Työkalujen lähdekoodi on yksityinen.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="toimitus">
+  <div class="wrap about">
+    <div>
+      <h2 id="toimitus">Toimitus ja yhteystiedot</h2>
+      <p>Sivustoa tekee Pikakasinot.fi:n toimitus. Päätoimittaja on <a href="https://pikakasinot.fi/author/sampo-mannila/">Sampo Mannila</a>.</p>
+      <ul class="contacts">
+        <li><span>Sivusto</span><a href="https://pikakasinot.fi/fi/">pikakasinot.fi</a></li>
+        <li><span>Sähköposti</span><a href="mailto:info@pikakasinot.fi">info@pikakasinot.fi</a></li>
+        <li><span>X</span><a href="https://x.com/pikakasinot" rel="me">@pikakasinot</a></li>
+        <li><span>GitHub</span><a href="https://github.com/Pikakasinot-fi" rel="me">Pikakasinot-fi</a></li>
+      </ul>
+      <p class="english" lang="en"><strong>In English:</strong> Pikakasinot.fi is a Finnish-language guide to Pay N Play casinos, where players sign in and deposit with their online banking credentials instead of filling in a registration form. This GitHub organization hosts the publishing tools for the site.</p>
+    </div>
+    <div class="disclosure">
+      <h3>Kaupallinen opas</h3>
+      <p>Pikakasinot.fi on kaupallinen opas. Kasinolinkit ovat kumppanilinkkejä, ja tarjoukset ovat kasinoiden omia. Tarkista tarjouksen säännöt ja ehdot aina kasinon sivulta.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div><span class="age">18+</span>Rahapelit on kielletty alle 18-vuotiailta. Pelaa vastuullisesti.</div>
+      <nav aria-label="Alatunniste">
+        <a href="https://pikakasinot.fi/vastuullinen-pelaaminen-ikaraja/">Vastuullinen pelaaminen</a>
+        <a href="https://pikakasinot.fi/tietosuoja-kayttoehdot/">Tietosuoja ja käyttöehdot</a>
+        <a href="https://www.peluuri.fi/">Peluuri.fi</a>
+      </nav>
+    </div>
+    <div class="legal">© Pikakasinot.fi</div>
+  </div>
+</footer>
+
+</body>
+</html>
